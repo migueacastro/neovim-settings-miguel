@@ -38,15 +38,15 @@ vim.keymap.set("n", "fm", vim.lsp.buf.format, { desc = "Format" })
 vim.keymap.set("n", "df", vim.diagnostic.open_float, { desc = "Diagnostics" })
 
 vim.diagnostic.config({
-  virtual_text = true,
-  update_in_insert = true,
+    virtual_text = true,
+    update_in_insert = true,
 })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities = vim.tbl_deep_extend("force", capabilities, require("mini.completion").get_lsp_capabilities())
 
 vim.lsp.config("*", { capabilities = capabilities })
-
 -- Server overrides
 vim.lsp.config("lua_ls", {
   settings = {
