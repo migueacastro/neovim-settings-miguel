@@ -22,4 +22,4 @@ local config = {
 }
 require("nvim-tree").setup(config)
 
-vim.keymap.set("n", "<C-e>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle Nvim Tree", silent = true })
+vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle Nvim Tree", silent = true })

@@ -17,8 +17,8 @@ require("bufferline").setup({
     offsets = {
       {
         filetype = "NvimTree",
-        text = "Explorer",
-        text_align = "left",
+        text = "Miguel Castro",
+        text_align = "center",
         separator = true,
       },
     },
