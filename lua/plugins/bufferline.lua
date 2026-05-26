@@ -1,0 +1,31 @@
+require("bufferline").setup({
+  options = {
+    mode = "buffers",
+    style_preset = require("bufferline").style_preset.default,
+    themable = true,
+    numbers = "none",
+    close_command = function(bufnr) require("mini.bufremove").delete(bufnr, false) end,
+    right_mouse_command = function(bufnr) require("mini.bufremove").delete(bufnr, false) end,
+    left_mouse_command = "buffer %d",
+    indicator = { style = 'underline' },
+    buffer_close_icon = '󰅖',
+    modified_icon = '●',
+    close_icon = '',
+    max_name_length = 18,
+    tab_size = 18,
+    diagnostics = "nvim_lsp",
+    offsets = {
+      {
+        filetype = "NvimTree",
+        text = "Explorer",
+        text_align = "left",
+        separator = true,
+      },
+    },
+    show_buffer_icons = true,
+    show_buffer_close_icons = true,
+    separator_style = "slant",
+    always_show_bufferline = true,
+    hover = { enabled = true, delay = 200, reveal = {'close'} },
+  },
+})
