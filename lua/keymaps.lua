@@ -47,6 +47,27 @@ vim.keymap.set("n", "<leader>vh", "<cmd>split<cr>", { desc = "Horizontal split" 
 vim.keymap.set("n", "<leader>vt", "<cmd>vsplit | term<cr>a", { desc = "Vertical terminal" })
 vim.keymap.set("n", "<leader>ht", "<cmd>split | term<cr>a", { desc = "Horizontal terminal" })
 
+-- Navegación rápida al principio y final del archivo
+vim.keymap.set("n", "<leader>e", "G", { desc = "Go to end of file" })
+vim.keymap.set("n", "<leader>b", "gg", { desc = "Go to beginning of file" })
+
+-- Cerrar buffers (Bufferline y nativo)
+vim.keymap.set("n", "<leader>c", "<cmd>BufferLinePickClose<CR>", { desc = "Close current buffer" })
+
+-- Copiar la ruta relativa del archivo (ej: src/main.lua)
+vim.keymap.set("n", "<leader>cp", function()
+    local path = vim.fn.expand("%")
+    vim.fn.setreg("+", path)
+    print("Relative path copied: " .. path)
+end, { desc = "Copy relative path" })
+
+-- Copiar la ruta absoluta del archivo (ej: /home/usuario/proyecto/src/main.lua)
+vim.keymap.set("n", "<leader>cP", function()
+    local path = vim.fn.expand("%:p")
+    vim.fn.setreg("+", path)
+    print("Absolute path copied: " .. path)
+end, { desc = "Copy absolute path" })
+
 -- Commands
 vim.api.nvim_create_user_command("Keymaps", function()
     require('mini.extra').pickers.keymaps()
