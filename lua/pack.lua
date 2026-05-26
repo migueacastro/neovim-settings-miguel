@@ -19,6 +19,7 @@ vim.pack.add({
         "https://github.com/nvim-telescope/telescope.nvim",
         "https://github.com/m4xshen/autoclose.nvim",
         "https://github.com/jedrzejboczar/possession.nvim",
+        "https://github.com/windwp/nvim-ts-autotag",
 })
 
 -- Autoload all files in lua/plugins/

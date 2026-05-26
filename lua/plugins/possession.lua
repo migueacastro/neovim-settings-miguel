@@ -23,10 +23,16 @@ require('possession').setup {
             preserve_layout = true,
             match = { floating = true },
         },
+        delete_buffers = false,
+        delete_hidden_buffers = false,
         nvim_tree = true,
         tabby = true,
     },
 }
+
+-- Ensure sessionoptions handles buffers correctly
+vim.opt.sessionoptions:append('globals')
+vim.opt.sessionoptions:remove('options')
 
 vim.keymap.set('n', '<leader>ss', '<cmd>SSave<cr>', { desc = 'Save session' })
 vim.keymap.set('n', '<leader>sl', '<cmd>SList<cr>', { desc = 'List sessions' })

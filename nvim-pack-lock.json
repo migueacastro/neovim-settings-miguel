@@ -52,6 +52,10 @@
       "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
+    "nvim-ts-autotag": {
+      "rev": "88c1453db4ba7dd24131086fe51fdf74e587d275",
+      "src": "https://github.com/windwp/nvim-ts-autotag"
+    },
     "nvim-web-devicons": {
       "rev": "0d7d35fa946837b8738b17c18d1faa1ac351e7f9",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
@@ -63,6 +67,10 @@
     "possession.nvim": {
       "rev": "fbea95b16c284727bc8deff2c3780a73efcdaca6",
       "src": "https://github.com/jedrzejboczar/possession.nvim"
+    },
+    "swenv.nvim": {
+      "rev": "4157de2619ec2e5c61c103fb6517845a0e04e558",
+      "src": "https://github.com/AckslD/swenv.nvim"
     },
     "telescope.nvim": {
       "rev": "7d324792b7943e4aa16ad007212e6acc6f9fe335",

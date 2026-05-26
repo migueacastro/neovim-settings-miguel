@@ -56,17 +56,26 @@ end, { desc = 'Themes' })
 -- Mini.Completion
 require("mini.completion").setup({ lsp_completion = { auto_setup = true } })
 
--- Mini.Snippets
+--- mini snippets ---
 local MiniSnippets = require("mini.snippets")
 MiniSnippets.setup({
         snippets = { MiniSnippets.gen_loader.from_lang() },
         mappings = {
                 expand = '<C-j>',
-                jump_next = '<C-j>',
-                jump_prev = '<C-k>',
+                jump_next = '<C-l>',
+                jump_prev = '<C-h>',
+        },
+        session = {
+            virtual_text = { empty = '•', final = '▫' },
         },
 })
 MiniSnippets.start_lsp_server({ match = false })
+
+-- Subtle snippet highlights
+vim.api.nvim_set_hl(0, 'MiniSnippetsCurrent', { underline = true })
+vim.api.nvim_set_hl(0, 'MiniSnippetsVisited', { link = 'Comment' })
+vim.api.nvim_set_hl(0, 'MiniSnippetsUnvisited', { link = 'Normal' })
+
 
 -- Mini.Clue
 local miniclue = require('mini.clue')

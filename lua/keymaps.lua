@@ -27,6 +27,15 @@ vim.keymap.set("n", "<S-Tab>", "<cmd>bp<CR>", { desc = "Prev buffer" })
 vim.keymap.set("n", "<C-a>", "ggVG", { desc = "Select all" })
 vim.keymap.set("n", "<C-c>", "<cmd>%y+<CR>", { desc = "Copy all" })
 vim.keymap.set("i", "<C-c>", "<Esc>")
+
+-- Completion confirmation
+vim.keymap.set("i", "<CR>", function()
+    if vim.fn.pumvisible() ~= 0 then
+        return "<C-y>"
+    end
+    return "<CR>"
+end, { expr = true, replace_keycodes = true, desc = "Confirm completion" })
+
 vim.keymap.set("n", "<leader>X", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Make executable" })
 vim.keymap.set("n", "<leader>re", "<cmd>restart<cr>", { desc = "Reload config" })
 
