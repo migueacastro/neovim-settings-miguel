@@ -30,6 +30,14 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<leader>X", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Make executable" })
 vim.keymap.set("n", "<leader>re", "<cmd>restart<cr>", { desc = "Reload config" })
 
+-- Splits
+vim.keymap.set("n", "<leader>vs", "<cmd>vsplit<cr>", { desc = "Vertical split" })
+vim.keymap.set("n", "<leader>vh", "<cmd>split<cr>", { desc = "Horizontal split" })
+
+-- Terminal
+vim.keymap.set("n", "<leader>vt", "<cmd>vsplit | term<cr>a", { desc = "Vertical terminal" })
+vim.keymap.set("n", "<leader>ht", "<cmd>split | term<cr>a", { desc = "Horizontal terminal" })
+
 -- Commands
 vim.api.nvim_create_user_command("Keymaps", function()
     require('mini.extra').pickers.keymaps()

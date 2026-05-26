@@ -15,22 +15,32 @@ A modular and efficient Neovim setup focused on performance and modern developer
 - `Ctrl + s`: Save file
 - `Ctrl + a`: Select all
 - `Ctrl + c`: Copy to system clipboard
-- `fm`: Format buffer
+- `ff`: Format buffer
 - `<leader>s`: Search and replace word under cursor
 - `<leader>re`: Reload configuration
 
-### Navigation
+### Navigation & Splits
 - `Tab` / `Shift + Tab`: Cycle buffers
+- `<leader>vs`: Vertical split
+- `<leader>vh`: Horizontal split
 - `C-n`: Toggle file tree
 - `-`: Toggle floating file explorer
+
+### Terminal
+- `<leader>vt`: Vertical terminal
+- `<leader>ht`: Horizontal terminal
+
+### Pickers (Mini.Pick)
 - `<leader>pf`: Find files
 - `<leader>ps`: Search project (grep)
+- `<leader>ph`: Help tags
+- `<leader>pk`: Search keymaps
+- `<leader>pt`: Select theme (persists)
+- `<leader>xx`: Diagnostics
 
-### Sessions & UI
+### Sessions
 - `<leader>ss`: Save session
 - `<leader>sl`: List sessions
-- `<leader>pt`: Select theme (persists on restart)
-- `<leader>pk`: Search keymaps
 
 ## Structure
 
