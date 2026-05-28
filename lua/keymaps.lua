@@ -20,7 +20,7 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move down" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move up" })
 
 -- Utils
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Search/Replace word" })
+vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Search/Replace word" })
 vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<cmd>w<CR>", { desc = "Save" })
 vim.keymap.set("n", "<Tab>", "<cmd>bn<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<S-Tab>", "<cmd>bp<CR>", { desc = "Prev buffer" })
@@ -72,3 +72,7 @@ end, { desc = "Copy absolute path" })
 vim.api.nvim_create_user_command("Keymaps", function()
     require('mini.extra').pickers.keymaps()
 end, { desc = "Show keymaps" })
+
+-- Comentar/Descomentar código
+vim.keymap.set("n", "<leader>/", "gcc", { remap = true, desc = "Toggle comment line" })
+vim.keymap.set("v", "<leader>/", "gc", { remap = true, desc = "Toggle comment block" })

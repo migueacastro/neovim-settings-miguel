@@ -45,8 +45,6 @@ vim.keymap.set("n", "<leader>pt", function()
         source = {
             choose = function(item)
                 vim.cmd.colorscheme(item)
-                local file_path = vim.fn.stdpath("config") .. "/lua/plugins/theme.lua"
-                vim.fn.writefile({ 'vim.cmd.colorscheme("' .. item .. '")' }, file_path)
                 print("Default theme: " .. item)
             end
         }

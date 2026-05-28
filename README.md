@@ -15,7 +15,7 @@ A modular and efficient Neovim setup focused on performance and modern developer
 - Ctrl + s: Save file
 - Ctrl + a: Select all text
 - Ctrl + c: Copy to system clipboard
-- ff: Format current buffer
+- fm: Format current buffer
 - <leader>s: Search and replace word under cursor
 - <leader>re: Reload configuration
 

@@ -2,6 +2,7 @@ require("mason").setup()
 
 -- LSP Servers to enable (using lspconfig names)
 local servers = {
+	"prettier",
 	"vtsls",
 	"svelte",
 	"emmet_ls",
@@ -41,8 +42,8 @@ end)
 vim.lsp.enable(servers)
 
 -- Keymaps
-vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = "Definition" })
-vim.keymap.set("n", "ff", vim.lsp.buf.format, { desc = "Format" })
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Definition" })
+vim.keymap.set("n", "fm", vim.lsp.buf.format, { desc = "Format" })
 vim.keymap.set("n", "df", vim.diagnostic.open_float, { desc = "Diagnostics" })
 
 vim.diagnostic.config({ 
