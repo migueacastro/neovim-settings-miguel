@@ -115,39 +115,39 @@ miniclue.setup({
 -- Mini.Diff
 require("mini.diff").setup({ source = require("mini.diff").gen_source.git({ index = false }) })
 
--- Mini.Starter
-local starter = require('mini.starter')
-local function possession_sessions()
-    local sessions = require('possession.session').list()
-    local items = {}
-    for _, data in pairs(sessions) do
-        table.insert(items, {
-            name = 'Session: ' .. data.name,
-            action = 'SLoad ' .. data.name,
-            section = 'Sessions',
-        })
-    end
-    return items
-end
-
-starter.setup({
-        evaluate_single = true,
-        header = [[
-  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
-  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
-  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
-  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
-  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
-  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
-        ]],
-        items = {
-                starter.sections.recent_files(5, false),
-                possession_sessions,
-                starter.sections.builtin_actions(),
-        },
-        content_hooks = {
-                starter.gen_hook.adding_bullet(" "),
-                starter.gen_hook.aligning('center', 'center'),
-        },
-        footer = os.date("󱑒 %A, %B %d"),
-})
+-- -- Mini.Starter
+-- local starter = require('mini.starter')
+-- local function possession_sessions()
+--     local sessions = require('possession.session').list()
+--     local items = {}
+--     for _, data in pairs(sessions) do
+--         table.insert(items, {
+--             name = 'Session: ' .. data.name,
+--             action = 'SLoad ' .. data.name,
+--             section = 'Sessions',
+--         })
+--     end
+--     return items
+-- end
+-- 
+-- starter.setup({
+--         evaluate_single = true,
+--         header = [[
+--   ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
+--   ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
+--   ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
+--   ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
+--   ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
+--   ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
+--         ]],
+--         items = {
+--                 starter.sections.recent_files(5, false),
+--                 possession_sessions,
+--                 starter.sections.builtin_actions(),
+--         },
+--         content_hooks = {
+--                 starter.gen_hook.adding_bullet(" "),
+--                 starter.gen_hook.aligning('center', 'center'),
+--         },
+--         footer = os.date("󱑒 %A, %B %d"),
+-- })

@@ -84,6 +84,10 @@
       "rev": "a5c0d24749cce1181b51aab3f05ca6b732e7733d",
       "src": "https://github.com/tree-sitter/tree-sitter"
     },
+    "vim-be-good": {
+      "rev": "0ae3de14eb8efc6effe7704b5e46495e91931cc5",
+      "src": "https://github.com/ThePrimeagen/vim-be-good"
+    },
     "vim-fugitive": {
       "rev": "3b753cf8c6a4dcde6edee8827d464ba9b8c4a6f0",
       "src": "https://github.com/tpope/vim-fugitive"

@@ -76,3 +76,5 @@ end, { desc = "Show keymaps" })
 -- Comentar/Descomentar código
 vim.keymap.set("n", "<leader>/", "gcc", { remap = true, desc = "Toggle comment line" })
 vim.keymap.set("v", "<leader>/", "gc", { remap = true, desc = "Toggle comment block" })
+
+
